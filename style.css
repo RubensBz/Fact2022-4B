@@ -10,16 +10,12 @@
   --primary-color: hsl(var(--hue), 100%, 26%);
   --headline: hsl(210, 11%, 15%);
   --paragraph: hsl(210, 9%, 31%);
-
   --brand-beige: hsla(108, 100%, 69%, 0.762);
   --brand-light: hsl(calc(var(--hue) - 22), 23%, 89%);
   --brand-light-2: hsl(calc(var(--hue) + 10), 14%, 97%);
   --brand-dark: hsl(var(--hue), 100%, 14%);
-
   --bg-light: hsl(180, 14%, 97%);
-
   font-size: 62.5%; /* 1rem = 10px */
-
   --nav-height: 7.2rem;
 }
 
@@ -37,11 +33,8 @@ body {
 body {
   font-family: 'DM Sans';
   font-size: 1.6rem;
-
   text-align: center;
-
   overflow: overlay;
-
   background-color: var(--bg-light);
 }
 
@@ -69,16 +62,13 @@ section header h4 {
   line-height: 150%;
   letter-spacing: 0.08rem;
   color: var(--primary-color);
-
   text-transform: uppercase;
-
   margin-bottom: 1.6rem;
 }
 
 section header h2 {
   font-size: 3rem;
   line-height: 3.9rem;
-
   color: var(--headline);
 }
 
@@ -86,7 +76,6 @@ section header h1 {
   font-size: 3.4rem;
   color: var(--headline);
   line-height: 130%;
-
   margin-bottom: 2.4rem;
 }
 
@@ -94,33 +83,25 @@ section .content p {
   font-weight: 400;
   font-size: 1.6rem;
   line-height: 150%;
-
   color: var(--paragraph);
 }
 
 .button {
-  background: var(--primary-color);
-
+  background: var(--primary-col or);
   border: none;
   border-radius: 4rem;
-
   margin-bottom: 6rem;
-
   padding: 1.6rem 3.2rem;
   width: fit-content;
-
   color: white;
   font-size: 1.4rem;
   font-weight: 700;
   text-transform: uppercase;
-
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 1.6rem;
-
   text-decoration: none;
-
   transition: background 200ms;
 }
 
@@ -136,7 +117,7 @@ section .content p {
 }
 
 /* custom colors */
-#services .card circle {
+#recycle .card circle {
   fill: var(--brand-light);
 }
 
@@ -146,7 +127,7 @@ section .content p {
 }
 
 button.open-menu path[stroke*='#00856F'],
-#contact li path {
+#ecopoint li path {
   stroke: var(--primary-color);
 }
 
@@ -162,13 +143,10 @@ body.menu-expanded #navigation .logo path,
 /*=== NAVIGATION =================================*/
 nav {
   display: flex;
-
-  height: var(--nav-height);
-
+  height: 8.5rem;
   position: fixed;
   top: 0;
   width: 100vw;
-
   z-index: 100;
 }
 
@@ -300,7 +278,6 @@ body.menu-expanded button path {
   height: calc(75% + var(--nav-height));
   background-color: var(--brand-light);
   display: block;
-
   position: absolute;
   top: 0;
   left: 0;
@@ -316,13 +293,17 @@ body.menu-expanded button path {
   line-height: 150%;
   font-weight: 400;
   color: var(--paragraph);
-
   margin-bottom: 3.2rem;
+}
+
+#home .content p {
+  text-align: justify;
+  padding-inline: 1.5rem;
 }
 
 #home img {
   width: 26.4rem;
-  display: block;
+  display: none;
   margin-inline: auto;
   object-position: 0 2rem;
 }
@@ -357,18 +338,18 @@ body.menu-expanded button path {
   line-height: 150%;
 }
 
-/*=== SERVICES =================================*/
-#services header h2 {
+/*=== recycle =================================*/
+#recycle header h2 {
   margin-bottom: 6rem;
 }
 
-#services .cards {
+#recycle .cards {
   display: flex;
   flex-direction: column;
   gap: 3.2rem;
 }
 
-#services .card {
+#recycle .card {
   padding: 2.4rem;
   text-align: left;
 
@@ -378,47 +359,47 @@ body.menu-expanded button path {
   border-radius: 0.6rem;
 }
 
-#services .card p {
+#recycle .card p {
   text-align: justify;
 }
 
-#services .card h3 {
+#recycle .card h3 {
   margin-block: 1.6rem;
 }
 
-/*=== ABOUT =================================*/
-#about {
+/*=== curiosities =================================*/
+#curiosities {
   text-align: left;
   background-color: var(--brand-beige);
 }
 
-#about header h2 {
+#curiosities header h2 {
   margin-bottom: 2.4rem;
 }
 
-#about .content p {
+#curiosities .content p {
   margin-top: 2.4rem;
   margin-bottom: 6rem;
 }
 
-/*=== CONTACT =================================*/
-#contact {
+/*=== ecopoint =================================*/
+#ecopoint {
   text-align: left;
 }
 
-#contact header {
+#ecopoint header {
   margin-bottom: 3.2rem;
 }
 
-#contact header h2 {
+#ecopoint header h2 {
   margin-bottom: 2.4rem;
 }
 
-#contact .content p {
+#ecopoint .content p {
   margin-top: 2.4rem;
   margin-bottom: 6rem;
 }
-#contact .col-a {
+#ecopoint .col-a {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -426,7 +407,7 @@ body.menu-expanded button path {
   gap: 0.8rem;
 }
 
-#contact .col-b {
+#ecopoint .col-b {
   width: 100%;
 }
 
@@ -444,13 +425,11 @@ body.menu-expanded button path {
 .gallery-items {
   width: 24rem;
   height: 34rem;
-
   box-shadow: 0.5rem 0.5rem 0.5rem rgba(39, 38, 38, 0.4);
   flex-grow: 1;
   transition: transform 0.2s linear;
   background-color: var(--bg-light);
   border-radius: 1.5rem;
-
   border: 5px solid white;
 }
 .gallery-items img {
@@ -681,11 +660,22 @@ footer .social-links {
       'A B'
       'C C';
     padding-inline: 12.3rem;
+    margin-top: 5rem;
   }
 
   #home .col-a {
     text-align: left;
     align-self: center;
+  }
+
+  #home .col-b img {
+    margin-inline: 0rem;
+    height: 34rem;
+  }
+
+  #home .col-b {
+    display: flex;
+    justify-content: flex-end;
   }
 
   #home h1 {
@@ -717,68 +707,95 @@ footer .social-links {
 
   #home img {
     width: 42rem;
+    display: block;
   }
 
-  /*=== SERVICES =================================*/
-  #services .wrapper {
+  /*=== recycle =================================*/
+  #recycle .wrapper {
     padding-inline: 12.3rem;
   }
 
-  #services h2 {
+  #recycle h2 {
     width: 47rem;
     margin-inline: auto;
   }
 
-  #services .cards {
+  #recycle .cards {
     flex-direction: row;
     flex-wrap: wrap;
     gap: 4rem;
   }
 
-  #services .card {
+  #recycle .card {
     width: 30%;
     flex-grow: 1;
   }
 
-  /*=== about =================================*/
+  /*=== curiosities =================================*/
 
-  #about .wrapper {
+  #curiosities .wrapper {
     grid-template-columns: 48rem, 1fr;
     grid-template-areas: 'B A';
     gap: 6.7rem;
     padding-inline: 12.3rem;
   }
 
-  #about .col-a {
+  #curiosities .col-a {
     align-self: center;
   }
 
-  #about .content p {
+  #curiosities .col-a h2 {
+    font-size: 4rem;
+  }
+
+  #curiosities .content p {
     margin-bottom: 0;
+    text-align: justify;
   }
 
-  /*=== contact =================================*/
 
-  #contact .wrapper {
+
+
+  /*=== ecopoint =================================*/
+
+  #ecopoint .wrapper {
     padding-inline: 12.3rem;
+    justify-content: end;
   }
 
-  #contact .wrapper {
-    grid-template-columns: 1fr, 1fr;
+  #ecopoint .wrapper {
     grid-template-areas: 'A B';
   }
 
-  #contact .wrapper .col-a {
-    width: 40rem;
+  #ecopoint .wrapper .col-a {
     align-self: center;
     margin-top: auto;
+    margin-left: 0rem;
+    margin-right: 6rem;
   }
 
-  #contact .wrapper .col-b path[width='340'] {
-    width: '600';
+  #ecopoint .wrapper .col-a header {
+    margin-bottom: 0rem;
   }
 
-  #contact h2 {
+  #ecopoint .wrapper .col-a header h2 {
+    margin-bottom: 2.4rem;
+  }
+
+  #ecopoint .wrapper .col-a .content p {
+    margin-top: 0rem;
+  }
+
+  #ecopoint .wrapper .col-b iframe {
+    width: 60rem;
+  }
+
+  #ecopoint .wrapper h4,
+  #ecopoint .wrapper h2 {
+    margin-left: 0;
+  }
+
+  #ecopoint h2 {
     font-style: bold;
     font-size: 4rem;
   }
@@ -786,6 +803,21 @@ footer .social-links {
 
   #gallery .wrapper {
     padding-inline: 12.3rem;
+  }
+
+  #gallery .wrapper h4,
+  #gallery .wrapper h2,
+  #gallery .wrapper p {
+    text-align: left;
+  }
+
+  #gallery .wrapper h2 {
+    margin-bottom: 2.4rem;
+    font-size: 4rem;
+  }
+
+  #gallery .wrapper .gallery-container {
+    padding-inline: 0rem;
   }
 
   /*=== FOOTER =================================*/
