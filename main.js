@@ -5,9 +5,9 @@ function onScroll() {
   showNavOnScroll()
   showBackToTopButtonOnScroll()
   activateMenuAtCurrentSection(home)
-  activateMenuAtCurrentSection(services)
-  activateMenuAtCurrentSection(about)
-  activateMenuAtCurrentSection(contact)
+  activateMenuAtCurrentSection(recycle)
+  activateMenuAtCurrentSection(curiosities)
+  activateMenuAtCurrentSection(ecopoint)
 }
 
 function activateMenuAtCurrentSection(section) {
@@ -67,9 +67,9 @@ ScrollReveal({
   #home, 
   #home img, 
   #home .stats, 
-  #services,
-  #services header,
-  #services .card
-  #about, 
-  #about header, 
-  #about .content`)
+  #recycle,
+  #recycle header,
+  #recycle .card
+  #curiosities, 
+  #curiosities header, 
+  #curiosities .content`)
