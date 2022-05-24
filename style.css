@@ -12,14 +12,13 @@
   --primary-color: hsl(0, 100%, 50%);
   --secundary-color: hsl(0, 0%, 100%);
   --primary-color-light: hsl(0, 100%, 70%);
-  --primary-color-dark: hsl(0, 90%, 40%);  
+  --primary-color-dark: hsl(0, 90%, 40%);
   --headline: hsl(0, 0%, 0%);
   --paragraph: hsl(0, 0%, 0%);
-  --bg:hsl(100, 27%, 28%);
-  --bg-light: hsl(100, 80%, 70%);
+  --bg: hsl(100, 27%, 28%);
+  --bg-light: hsl(101, 62%, 77%);
   --nav-height: 8rem;
   font-size: 62.5%; /* 1rem = 10px */
-
 }
 
 html {
@@ -40,15 +39,17 @@ body {
 
 body header h1 {
   font-family: 'Raleway', sans-serif;
-  font-size: 3rem;
+  font-size: 3.7rem;
   font-weight: 900;
-  line-height: 3.9rem;
+  letter-spacing: 0.5rem;
   color: var(--primary-color);
+  margin-bottom: 3rem;
+  text-transform: uppercase;
 }
 
 body header h2 {
   font-family: 'Shadows Into Light', cursive;
-  font-size: 3.4rem;
+  font-size: 3.2rem;
   font-weight: 700;
   color: var(--bg);
   line-height: 130%;
@@ -86,7 +87,7 @@ ul {
 }
 
 img {
-  max-width: 100%;
+  width: 100%;
 }
 
 section {
@@ -162,6 +163,10 @@ body.menu-expanded {
 
 body.menu-expanded > :not(nav) {
   visibility: hidden;
+}
+
+#navigation img {
+  width: 150px;
 }
 
 .menu,
@@ -251,7 +256,7 @@ body.menu-expanded button path {
 #home::before {
   content: '';
   width: 100%;
-  height: calc(95% + var(--nav-height));
+  height: calc(130% + var(--nav-height));
   background-color: var(--bg-light);
   display: block;
   position: absolute;
@@ -312,36 +317,32 @@ body.menu-expanded button path {
   color: var(--secundary-color);
 }
 
-
-
-
 /*----recycle----------------------*/
 #recycle {
   padding-inline: 5rem;
 }
-
 #recycle .cards {
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 3rem;
 }
 
 #recycle .card {
   padding: 2.5rem;
   text-align: left;
-  background: var(--bg);
-  border: 1px solid var(--bg);
+  border: 1px solid var(--bg-light);
   border-radius: 3rem;
 }
 
 #recycle .card h3 {
- margin-block: 1rem;
+  margin-block: 1rem;
   font-family: 'Raleway', sans-serif;
   font-size: 1.5rem;
   font-weight: 900;
   letter-spacing: 0.5rem;
   text-transform: uppercase;
-  color: var(--secundary-color);
+  color: var(--bg);
 }
 
 #recycle header h2 {
@@ -354,7 +355,72 @@ body.menu-expanded button path {
   font-size: 1.5rem;
   font-weight: 400;
   line-height: 130%;
-  color: var(--bg-light);
+  color: var(--bg);
+}
+
+.card {
+  position: relative;
+  width: 30rem;
+  height: 30rem;
+  color: #a18a96;
+  text-align: center;
+  display: grid;
+  place-content: center;
+  padding: 10px;
+  background: url('./images/figure-bkg-cards.png') center
+    no-repeat;
+  background-size: cover;
+  border-radius: 20px;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.card::before,
+.card::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: calc(60% + 35px);
+  background-color: #fff;
+  transition: transform 0.15s.25s ease-in;
+  z-index: -1;
+}
+
+.card::before {
+  top: 0;
+  clip-path: polygon(0 0, 100% 0, 100% 45%, 0% 100%);
+  transform: translateY(-100%);
+}
+
+.card::after {
+  bottom: 0;
+  clip-path: polygon(0 55%, 100% 0, 100% 100%, 0% 100%);
+  transform: translateY(100%);
+}
+
+.card__content {
+  opacity: 0;
+  transition: opacity 0.25s;
+}
+
+.card__title {
+  color: #6a515e;
+  margin-bottom: 15px;
+}
+
+.card__description {
+  font-size: 14px;
+}
+
+.card:hover::before,
+.card:hover::after {
+  transform: translateY(0);
+}
+
+.card:hover .card__content {
+  opacity: 1;
+  transition-delay: 0.75s;
 }
 
 /*----curiosities-------------------*/
@@ -366,27 +432,25 @@ body.menu-expanded button path {
 #curiosities header h2 {
   margin-bottom: 6rem;
   text-align: center;
-
 }
 
 #curiosities .content p {
-    font-family: 'Raleway', sans-serif;
-    font-size: 1.7rem;
-    line-height: 130%;
-    font-weight: 600;
-    color: var(--bg);
-    margin-bottom: 2rem;
-    text-align: justify;
-  }
+  font-family: 'Raleway', sans-serif;
+  font-size: 1.7rem;
+  line-height: 130%;
+  font-weight: 600;
+  color: var(--bg);
+  margin-bottom: 2rem;
+  text-align: justify;
+}
 
 #curiosities img {
   display: none;
 }
 
-
 /*----ecopoint ---------------------*/
-#ecopoint header,
-#ecopoint .content {
+
+#ecopoint {
   padding-inline: 5rem;
 }
 
@@ -410,52 +474,38 @@ body.menu-expanded button path {
 }
 
 #ecopoint .col-b iframe {
-
+  width: 100%;
 }
 
 /*----gallery-----------------------*/
-#gallery {
-  background-color: var(--bg-light);
+
+#gallery-container {
+  background: var(--bg-light);
+  padding-inline: 1rem;
 }
 
-#gallery h2 {
+#gallery-container h2 {
   margin-bottom: 4rem;
 }
 
-#gallery .box p {
-  font-weight: bold;
-  color: white;
-  text-shadow: 0.1rem 0.1rem 0.5rem black;
-  margin-top: -0.5rem;
-  text-align: center;
-}
-.gallery-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-  gap: 2vw;
-  padding: 0 2vw;
+.gallery img {
+  width: 100%;
 }
 
-.gallery-items {
-  width: 30%rem;
-  height: 20rem;
-  box-shadow: 0.5rem 0.5rem 0.5rem rgba(39, 38, 38, 0.4);
-  transition: transform 0.2s linear;
-  background: url(./images/bkg/vector-ecology-symbols-horizontal-frame.png);
-  border-radius: 1rem;
+.gallery {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 8;
+  gap: 2px 5px;
+  background: var(--bg-light);
 }
 
-.gallery-items img {
-  width: 80%;
-  height: 100%;
+#gallery-container .gallery-img img {
+  width: 120px;
+  height: 120px;
   object-fit: cover;
-}
-
-.gallery-items:hover {
-  transform: scale(1.7);
-  margin-left: auto;
-  margin-right: auto;
+  border: 1px solid var(--bg);
+  background: url(./images/figure-bkg-gallery.png);
 }
 
 /*----footer------------------------*/
@@ -466,13 +516,17 @@ footer {
 }
 
 footer .wrapper .col-a,
-footer .wrapper .col-b{
+footer .wrapper .col-b {
   margin-bottom: 3rem;
 }
 
-footer .wrapper .col-c{
+footer .wrapper .col-c {
   color: white;
   text-align: center;
+}
+
+footer img {
+  width: 100%;
 }
 
 footer .logo {
@@ -829,16 +883,10 @@ footer .logo {
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-areas: 'A C B';
     padding-inline: 12.3rem;
-    ali
   }
-
 
   footer .col-a img {
     width: 120px;
-  }
-
-  footer .col-b ul .social-links {
-
   }
 
   footer p {
