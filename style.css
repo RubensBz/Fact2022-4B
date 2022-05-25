@@ -533,7 +533,7 @@ footer .logo {
 #backToTopButton {
   position: fixed;
   bottom: 1rem;
-  right: 5rem;
+  right: 2.5rem;
   opacity: 0;
   visibility: hidden;
   transform: translateY(100%);
