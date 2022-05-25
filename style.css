@@ -139,7 +139,7 @@ nav .wrapper {
 }
 
 nav {
-  background: var(--bg);
+  background: var(--primary-color);
 }
 
 nav.scroll {
@@ -533,7 +533,7 @@ footer .logo {
 #backToTopButton {
   position: fixed;
   bottom: 1rem;
-  right: 2.5rem;
+  right: 0.4rem;
   opacity: 0;
   visibility: hidden;
   transform: translateY(100%);
