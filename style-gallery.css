@@ -298,7 +298,7 @@ body.menu-expanded button path {
 
 #modal_img {
   width: 65vw;
-  transform: scale(2.5);
+  transform: scale(1.1);
   transition: all linear 0.3s;
 }
 
@@ -311,6 +311,7 @@ body.menu-expanded button path {
   height: 100vh;
   background-color: rgba(0, 0, 0, 0.7);
   position: fixed;
+  top: 10px;
   right: 0px;
   visibility: hidden;
   z-index: 1;
