@@ -134,7 +134,7 @@ nav .wrapper {
 }
 
 nav {
-  background: var(--bg);
+  background: var(--primary-color);
 }
 
 nav.scroll {
