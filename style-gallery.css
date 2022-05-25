@@ -112,6 +112,10 @@ path[fill*='#00856F'],
   fill: var(--primary-color);
 }
 
+button.open-menu path[stroke*='#00856F']{
+  stroke: var(--secundary-color);
+}
+
 #navigation.scroll button.open-menu path[stroke*='#00856F'] {
   stroke: var(--secundary-color);
 }
@@ -383,7 +387,7 @@ footer .logo {
 #backToTopButton {
   position: fixed;
   bottom: 10px;
-  right: 50px;
+  right: 4px;
   opacity: 0;
   visibility: hidden;
   transform: translateY(100%);
