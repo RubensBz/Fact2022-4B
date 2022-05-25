@@ -257,7 +257,7 @@ body.menu-expanded button path {
 #home::before {
   content: '';
   width: 100%;
-  height: calc(135% + var(--nav-height));
+  height: calc(130% + var(--nav-height));
   background-color: var(--bg-light);
   display: block;
   position: absolute;
@@ -487,34 +487,42 @@ body.menu-expanded button path {
 
 /*----gallery-----------------*/
 
-#gallery-container {
+#gallery {
   background: var(--bg-light);
 }
 
-#gallery-container h2 {
+#gallery h2 {
   margin-bottom: 4rem;
 }
 
-.gallery {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: auto;
-  gap: 5px;
-  background: var(--bg-light);
+.card_img {
+  width: 120px;
+  height: 120px;
+  overflow: hidden;
+  margin: 5px;
+  display: flex;
+  justify-content: center;
 }
 
-#gallery-container .wrapper.gallery-img {
-  width: 15rem;
-  height: 15rem;
-  object-fit: fill;
-}
-
-#gallery-container .wrapper .gallery-img img {
-  border: 1px solid var(--bg);
+.small_img {
+  height: 100%;
+  cursor: pointer;
+  transition: all linear 0.4s;
   background: url(./images/figure-bkg-gallery.png);
 }
 
-/*----footer------------------*/
+.small_img:hover {
+  filter: grayscale(100%);
+  transform: scale(1.1);
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+*----footer------------------*/
 footer {
   background-color: var(--primary-color);
 }
