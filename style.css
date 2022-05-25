@@ -257,7 +257,7 @@ body.menu-expanded button path {
 #home::before {
   content: '';
   width: 100%;
-  height: calc(130% + var(--nav-height));
+  height: calc(73% + var(--nav-height));
   background-color: var(--bg-light);
   display: block;
   position: absolute;
@@ -491,35 +491,13 @@ body.menu-expanded button path {
   background: var(--bg-light);
 }
 
+#gallery .wrapper a {
+  text-decoration: none;
+}
+
 #gallery h2 {
   margin-bottom: 4rem;
-}
-
-.card_img {
-  width: 120px;
-  height: 120px;
-  overflow: hidden;
-  margin: 5px;
-  display: flex;
-  justify-content: center;
-}
-
-.small_img {
-  height: 100%;
-  cursor: pointer;
-  transition: all linear 0.4s;
-  background: url(./images/figure-bkg-gallery.png);
-}
-
-.small_img:hover {
-  filter: grayscale(100%);
-  transform: scale(1.1);
-}
-
-.row {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
+ 
 }
 
 *----footer------------------*/
