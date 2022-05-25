@@ -501,8 +501,9 @@ body.menu-expanded button path {
 }
 
 /*----footer------------------*/
+
 footer {
-  background-color: var(--primary-color);
+  background: var(--primary-color);
 }
 
 footer .wrapper .col-a,
