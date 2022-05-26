@@ -377,11 +377,30 @@ body.menu-expanded button path {
   display: grid;
   place-content: center;
   padding: 10px;
-  background: url('./images/figure-bkg-cards.png') center no-repeat;
   background-size: cover;
   border-radius: 20px;
   z-index: 1;
   overflow: hidden;
+}
+
+.card#recycling {
+  background: url('./images/recycling.png') center no-repeat;
+}
+
+.card#selectiveCollect {
+  background: url('./images/selectiveCollect.png') 5%;
+}
+
+.card#sustainability {
+  background: url('./images/sustainability.png') center no-repeat;
+}
+
+.card#craftwork {
+  background: url('./images/craftwork.png') center no-repeat;
+}
+
+.card#ecopoints {
+  background: url('./images/ecopoints-small.png') center no-repeat;
 }
 
 .card::before,
@@ -500,6 +519,10 @@ body.menu-expanded button path {
 
 #gallery h2 {
   margin-bottom: 4rem;
+}
+
+#gallery img {
+  display: none;
 }
 
 /*----footer------------------*/
@@ -782,8 +805,19 @@ footer .logo {
     flex-grow: 1;
   }
 
+  .card#selectiveCollect {
+    background: url('./images/selectiveCollect.png') center no-repeat;
+  }
 
 
+  .card#craftwork {
+    background: url('./images/craftwork3.png') center no-repeat;
+  }
+
+
+  .card#ecopoints {
+    background: url('./images/ecopoints.png') center no-repeat;
+  }
 
 
   /*=== curiosities ====================*/
@@ -878,6 +912,16 @@ footer .logo {
   #gallery .wrapper h2 {
     margin-bottom: 2.4rem;
     font-size: 4rem;
+  }
+
+  #gallery .wrapper {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 'B A';
+    align-items: center;
+  }
+
+  #gallery img {
+    display: flex;
   }
 
   /*=== FOOTER =========================*/
