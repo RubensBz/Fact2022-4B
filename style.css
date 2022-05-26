@@ -17,6 +17,7 @@
   --paragraph: hsl(0, 0%, 0%);
   --bg: hsl(100, 27%, 28%);
   --bg-light: hsl(101, 62%, 77%);
+  --bg-light-2: rgba(88, 92, 88, 0.4);
   --nav-height: 10rem;
   font-size: 62.5%; /* 1rem = 10px */
 }
@@ -129,6 +130,7 @@ nav {
   height: 8.5rem;
   position: fixed;
   top: 0;
+
   width: 100vw;
   z-index: 100;
 }
@@ -258,7 +260,7 @@ body.menu-expanded button path {
 #home::before {
   content: '';
   width: 100%;
-  height: calc(135% + var(--nav-height));
+  height: calc(75% + var(--nav-height));
   background-color: var(--bg-light);
   display: block;
   position: absolute;
@@ -441,12 +443,12 @@ body.menu-expanded button path {
   text-align: center;
 }
 
-#curiosities .content p {
+#curiosities .col-b p {
   font-family: 'Raleway', sans-serif;
   font-size: 2rem;
   letter-spacing: 0.1rem;
   line-height: 130%;
-  font-weight: 600;
+  font-weight: 100;
   color: var(--bg);
   margin-bottom: 2rem;
   text-align: justify;
@@ -562,7 +564,6 @@ footer .logo {
   section {
     padding-block: 10rem;
     padding-inline: 12rem;
-    border: solid;
   }
 
   .col-a {
@@ -595,6 +596,7 @@ footer .logo {
 
   nav {
     padding-inline: 0rem;
+    right: 0;
   }
 
   nav#navigation .open-menu,
@@ -677,7 +679,8 @@ footer .logo {
 
   /* =============home==============*/
   #home::before {
-    height: calc(70% + var(--nav-height));
+    height: initial
+    background: var(--secundary-color);
   }
 
   #home {
@@ -685,21 +688,22 @@ footer .logo {
   }
 
   #home .wrapper {
-    grid-template-columns: 60.5rem 1fr;
+    grid-template-columns: 1fr;
     grid-template-areas:
-      'A B'
-      'C C';
+      'A'
+      'B'
+      'C';
     margin-top: 5rem;
   }
 
   #home .col-a {
-    text-align: left;
+    text-align: center;
     align-self: center;
   }
 
   #home .col-b img {
-    margin-inline: 0rem;
-    height: 34rem;
+    
+    width: 90%;
   }
 
   #home .col-b {
@@ -708,11 +712,20 @@ footer .logo {
   }
 
   #home h1 {
-    font-size: 5.2rem;
+    font-size: 5.3rem;
+    letter-spacing: 0.25rem;
   }
 
+  #home h3 {
+   margin-top: 0;
+   font-weight: 900;
+}
+
   #home .content p {
-    font-size: 1.8rem;
+    font-size: 2.28rem;
+    text-align: justify;
+    letter-spacing: 0.25rem;
+    font-weight: 600;
   }
 
   #home .stats {
@@ -723,7 +736,7 @@ footer .logo {
   }
 
   #home .stats .stat + .stat {
-    border-left: 1px solid var(--primary-color);
+    border-left: 1px solid var(--secundary-color);
   }
 
   #home .stats .stat {
@@ -739,17 +752,29 @@ footer .logo {
     display: block;
   }
 
-  /*=== recycle =================================*/
+  /*=== recycle ======================*/
+
+
+  #recycle {
+    background: var(--bg-light);
+  }
 
   #recycle h2 {
-    width: 47rem;
-    margin-inline: auto;
+    font-size: 6rem;
+  }
+
+  #recycle .card p {
+  font-size: 1.9rem;
+  }
+
+  #recycle .card circle,
+  #recycle .card svg {
+    display: none;
   }
 
   #recycle .cards {
     flex-direction: row;
     flex-wrap: wrap;
-    gap: 4rem;
   }
 
   #recycle .card {
@@ -757,12 +782,22 @@ footer .logo {
     flex-grow: 1;
   }
 
-  /*=== curiosities =================================*/
+
+
+
+
+  /*=== curiosities ====================*/
+
+  #curiosities {
+    background: var(--secundary-color);
+  }
 
   #curiosities .wrapper {
-    grid-template-columns: 48rem, 1fr;
-    grid-template-areas: 'B A';
-    gap: 6.7rem;
+    grid-template-columns: 50% 50%;
+    grid-template-areas: 
+    'A A'
+    'B C';
+    gap: 3rem;
   }
 
   #curiosities .col-a {
@@ -770,20 +805,29 @@ footer .logo {
   }
 
   #curiosities .col-a h2 {
-    font-size: 4rem;
-  }
-
-  #curiosities .content p {
+    text-align: left;
+    font-size: 6rem;
     margin-bottom: 0;
-    text-align: justify;
   }
 
-  #curiosities .col-b img {
+  #curiosities .col-b p {
+    margin-bottom: 0;
+    text-align: left;
+    font-weight: 100;
+  }
+
+  #curiosities .col-c img {
     display: flex;
-    height: 100%;
+    align-items: stretch;;
+  
   }
 
   /*=== ecopoint =================================*/
+
+  #ecopoint {
+    background: var(--bg-light);
+  }
+
 
   #ecopoint .wrapper {
     justify-content: end;
@@ -826,6 +870,10 @@ footer .logo {
     font-size: 4rem;
   }
   /*=== GALLERY =================================*/
+
+  #gallery {
+    background: var(--secundary-color);
+  }
 
   #gallery .wrapper h2 {
     margin-bottom: 2.4rem;
