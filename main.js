@@ -8,6 +8,8 @@ function onScroll() {
   activateMenuAtCurrentSection(recycle)
   activateMenuAtCurrentSection(curiosities)
   activateMenuAtCurrentSection(ecopoint)
+    activateMenuAtCurrentSection(gallery)
+  activateMenuAtCurrentSection(about)
 }
 
 function activateMenuAtCurrentSection(section) {
