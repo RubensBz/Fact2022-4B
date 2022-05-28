@@ -836,15 +836,15 @@ footer .logo {
   }
 
   #curiosities .wrapper {
-    grid-template-columns: 50% 50%;
+    grid-template-columns: 45% 55%;
     grid-template-areas: 
-    'A A'
+    'A C'
     'B C';
     gap: 3rem;
   }
 
-  #curiosities .col-a {
-    align-self: center;
+  #curiosities .col-a h3 {
+    text-align: left;
   }
 
   #curiosities .col-a h2 {
@@ -860,6 +860,11 @@ footer .logo {
   }
 
   #curiosities .col-c img {
+    display: initial;  
+  }
+
+  
+  #curiosities .col-c {
     display: flex;
     align-items: stretch;;
   
@@ -953,12 +958,10 @@ footer .logo {
 
   footer p {
     margin-bottom: 0;
-    font-size: 1rem;
+    font-size: 1rem;  
   }
 
   footer .social-links {
     margin-top: 0;
-  }
+  }                                                                   
 }
-
-
