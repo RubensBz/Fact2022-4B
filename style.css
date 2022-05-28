@@ -130,7 +130,6 @@ nav {
   height: 8.5rem;
   position: fixed;
   top: 0;
-
   width: 100vw;
   z-index: 100;
 }
@@ -537,6 +536,8 @@ body.menu-expanded button path {
 
 footer {
   background: var(--primary-color);
+  padding-top: 5rem;
+  padding-bottom: 5rem;
 }
 
 footer .wrapper .col-a,
@@ -588,7 +589,7 @@ footer .logo {
   }
 
   .wrapper {
-    width: min(1200px, 100%);
+    width: min(1050px, 100%);
     display: grid;
   }
 
@@ -961,86 +962,3 @@ footer .logo {
 }
 
 
-/*----responsive------------------*/
-@media (min-width: 800px) {
-  /*----geral---------------------*/
-  body {
-    overflow: auto;
-  }
-
-  .wrapper {
-    width: min(1024px, 95%);
-    display: grid;
-  }
-
-  nav#navigation .menu {
-
-    width: 78%;
-  }
-
-  #home h1 {
-    font-size: 5.3rem;
-    letter-spacing: 0.5rem;
-  }
-
-  #curiosities .wrapper {
-    grid-template-columns: 50% 50%;
-    grid-template-areas: 
-    'A B'
-    'C B';
-    gap: 3rem;
-  }
-
-  #curiosities .col-a  {
-    display: flex;
-    justify-content: flex-end;
-  }
-
-  #curiosities .col-a h3 {
-    text-align: left;
-  }
-
-  #curiosities .col-a h2 {
-    text-align: left;
-    font-size: 6rem;
-    margin-bottom: 0;
-  }
-
-
-  #curiosities .col-c img {
-    display: flex;
-    align-items: stretch;;
-  
-  }
-
-
-  #ecopoint .wrapper {
-    grid-template-areas: 
-    'A'
-    'B';
-  }
-
-  #ecopoint .wrapper .col-a {
-    align-self: center;
-    margin-right: 0;
-  }
-
-  #ecopoint .wrapper .col-a h3 {
-    margin-bottom: 2rem;
-   }
-
-   #ecopoint .wrapper .col-a h2 {
-    font-size: 6rem;
-   }
-
-  #ecopoint .wrapper .col-a p {
-   text-align: center;
-  }
-
-
-  #ecopoint .wrapper .col-b iframe {
-    width: 100%;
-}
-
-
-}
